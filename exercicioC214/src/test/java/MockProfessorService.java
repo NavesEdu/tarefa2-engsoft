@@ -17,24 +17,13 @@ public class MockProfessorService implements ProfessorService{
     }
 
     @Override
-    public boolean professorExistente(int id) {
+    public boolean verificaProfessorNoturno(String atendimento) {
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(10);
-        list.add(20);
-        list.add(30);
-
-        for (int i=0; i < list.size(); i++){
-            if (list.get(i).equals(id) || list.get(i).equals(id)){
-                return true;
-            }else{
-                return false;
-            }
-        }
-
-        return false;
+        if(ProfessorConst.MARCELO.contains("13h")){
+            return true;
+        }else
+            return false;
     }
-
 
 
 }

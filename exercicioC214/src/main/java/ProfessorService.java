@@ -2,6 +2,6 @@ public interface ProfessorService {
 
     public String busca(String nome);
 
-    public boolean professorExistente(int id);
+    public boolean verificaProfessorNoturno(String atendimento);
 
 }

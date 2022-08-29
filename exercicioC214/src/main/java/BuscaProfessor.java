@@ -20,10 +20,10 @@ public class BuscaProfessor {
                 jsonObject.get("periodo").getAsString());
     }
 
-    public boolean verificaArrayListExistente(int id){
-        boolean professorExistente = professorService.professorExistente(id);
+    public boolean verificaProfessorNoturno(String atendimento){
+        boolean professorNoturno = professorService.verificaProfessorNoturno(atendimento);
 
-        if (professorExistente){
+        if (professorNoturno){
             return true;
         }else{
             return false;

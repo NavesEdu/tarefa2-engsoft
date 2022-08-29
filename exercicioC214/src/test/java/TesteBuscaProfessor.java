@@ -53,6 +53,32 @@ public class TesteBuscaProfessor {
     }
 
     //Cenários de Falha
-    
+
+    @Test
+    public void testeBuscaProfessorInexistente(){
+
+        Professor inexistente = buscaProfessor.buscaProfessor("10h");
+
+        //Faz assertion
+        assertEquals("Inexistente", inexistente.getNomeDoProfessor());
+
+    }
+
+    @Test
+    public void testeBuscaProfessorAtendimentoNoturno(){
+
+        Professor profnoturno = buscaProfessor.buscaProfessor("19h");
+        assertNotEquals("Chris", "Marcelo");
+
+    }
+
+    @Test
+    public void testeMarceloProfessorNoturno(){
+
+        boolean marcelo = buscaProfessor.verificaProfessorNoturno("19h");
+        assertFalse(marcelo);
+
+    }
+
 
 }
