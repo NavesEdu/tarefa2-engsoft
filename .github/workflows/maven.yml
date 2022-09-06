@@ -1,6 +1,5 @@
 # This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
-
 name: Java CI with Maven
 
 on:
@@ -10,7 +9,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
@@ -23,8 +22,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
         
-    - name: Testes utilizando Java e maven
+    - name: Teste com maven
       run: |
         cd exercicioC214
         mvn clean test
-          
