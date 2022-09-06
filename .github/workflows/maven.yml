@@ -22,7 +22,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Acessando diretório
-      run: cd tarefa2-engsoft/exercicioC214
+        
     - name: Testes utilizando Java e maven
-      run: mvn clean test
+      run: |
+        cd exercicioC214
+        mvn clean test
+          
